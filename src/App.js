@@ -1,3 +1,4 @@
+import AppStyles from './Components/css/catagories.styles.module.css';
 
 const App = function(props) {
   const catagories = [
