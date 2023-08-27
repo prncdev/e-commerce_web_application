@@ -1,16 +1,15 @@
-import './/Styles/categories.styles.scss';
-import CatagoryItem from './Components/catagory-items/Catagory-item.component.';
+import { Component } from 'react';
+import CatagoriesContainer from './Components/catagories-container/catagories-container.component';
 import catagories from './Product-Data/categories.json';
 
-const App = function (props) {
-
-  return (
-    <main className='categories-container'>
-      {catagories.map(({ id, title, imageUrl }) => (
-        <CatagoryItem key={id} title={title} imageUrl={imageUrl}/>
-      ))}
-    </main>
-  );
+class App extends Component {
+  render() {
+    return (
+      <main className='App'>
+        <CatagoriesContainer catagories={catagories}/>
+      </main>
+    )
+  }
 }
 
 export default App;
