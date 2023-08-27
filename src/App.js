@@ -1,14 +1,12 @@
-import { useState } from 'react';
 
 const App = function(props) {
-  const catagoriesArray = [
+  const catagories = [
     { id: 1, title: 'Hats' },
     { id: 2, title: 'Jackets' },
     { id: 3, title: 'Sneakers' },
     { id: 4, title: 'Womens' },
     { id: 5, title: 'Mens' },
-  ]
-  const [ catagories, setCatagories ] = useState(catagoriesArray);
+  ];
 
   return (
     <main className='catagories-container'>
