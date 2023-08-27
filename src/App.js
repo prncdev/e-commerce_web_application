@@ -1,35 +1,30 @@
-import { Component } from 'react';
+import { useState } from 'react';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+const App = function(props) {
+  const catagoriesArray = [
+    { id: 1, title: 'Hats' },
+    { id: 2, title: 'Jackets' },
+    { id: 3, title: 'Sneakers' },
+    { id: 4, title: 'Womens' },
+    { id: 5, title: 'Mens' },
+  ]
+  const [ catagories, setCatagories ] = useState(catagoriesArray);
 
-    this.state = {
-      catagories: [
-        { id: 1, title: 'Hats' },
-        { id: 2, title: 'Jackets' },
-        { id: 3, title: 'Sneakers' },
-        { id: 4, title: 'Womens' },
-        { id: 5, title: 'Mens' },
-      ]
-    }
-  }
-  render() {
-    return (
-      <main className='catagories-container'>
-        {this.state.catagories.map(({id, title}) => (
-          <section key={id} className="catagory-container">
-            {/* <img src="" alt="" /> */}
-            <section className="catagory-body-container">
-              <h2 className='product-title'>{title}</h2>
-              <p>Shop Now</p>
-            </section>
+  return (
+    <main className='catagories-container'>
+      {this.state.catagories.map(({id, title}) => (
+        <section key={id} className="catagory-container">
+          {/* <img src="" alt="" /> */}
+          <section className="catagory-body-container">
+            <h2 className='product-title'>{title}</h2>
+            <p>Shop Now</p>
           </section>
-        ))}
+        </section>
+      ))}
 
-      </main>
-    )
-  };
-};
+    </main>
+  );
+
+}
 
 export default App;
