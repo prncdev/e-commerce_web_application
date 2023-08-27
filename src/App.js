@@ -1,4 +1,5 @@
-import AppStyles from './Components/css/catagories.styles.module.css';
+// import './simpleStyle.scss';
+import './/Styles/categories.styles.scss';
 
 const App = function(props) {
   const catagories = [
@@ -10,11 +11,11 @@ const App = function(props) {
   ];
 
   return (
-    <main className='catagories-container'>
-      {this.state.catagories.map(({id, title}) => (
-        <section key={id} className="catagory-container">
+    <main className='categories-container'>
+      {catagories.map(({id, title}) => (
+        <section key={id} className='category-container'>
           {/* <img src="" alt="" /> */}
-          <section className="catagory-body-container">
+          <section className='category-body-container'>
             <h2 className='product-title'>{title}</h2>
             <p>Shop Now</p>
           </section>
