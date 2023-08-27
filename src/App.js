@@ -1,4 +1,3 @@
-// import './simpleStyle.scss';
 import './/Styles/categories.styles.scss';
 
 const App = function(props) {
