@@ -8,7 +8,7 @@ class App extends Component {
       <main className='App'>
         <CatagoriesContainer catagories={catagories}/>
       </main>
-    )
+    );
   }
 }
 

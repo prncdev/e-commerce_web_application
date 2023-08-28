@@ -8,7 +8,7 @@ const CatagoriesContainer = function({ catagories }) {
         <CatagoryItem key={catagory.id} catagory={catagory} />
       ))}
     </section>
-  )
+  );
 }
 
 export default CatagoriesContainer;

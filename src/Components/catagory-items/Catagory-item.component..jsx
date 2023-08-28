@@ -11,7 +11,7 @@ const CatagoryItem = function ({catagory}) {
         <p>Shop Now</p>
       </section>
     </section>
-  )
+  );
 }
 
 export default CatagoryItem;
