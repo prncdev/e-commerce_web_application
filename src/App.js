@@ -1,29 +1,16 @@
 import './/Styles/categories.styles.scss';
+import CatagoryItem from './Components/catagory-items/Catagory-item.component.';
+import catagories from './Product-Data/categories.json';
 
-const App = function(props) {
-  const catagories = [
-    { id: 1, title: 'Hats' },
-    { id: 2, title: 'Jackets' },
-    { id: 3, title: 'Sneakers' },
-    { id: 4, title: 'Womens' },
-    { id: 5, title: 'Mens' },
-  ];
+const App = function (props) {
 
   return (
     <main className='categories-container'>
-      {catagories.map(({id, title}) => (
-        <section key={id} className='category-container'>
-          {/* <img src="" alt="" /> */}
-          <section className='category-body-container'>
-            <h2 className='product-title'>{title}</h2>
-            <p>Shop Now</p>
-          </section>
-        </section>
+      {catagories.map(({ id, title, imageUrl }) => (
+        <CatagoryItem key={id} title={title} imageUrl={imageUrl}/>
       ))}
-
     </main>
   );
-
 }
 
 export default App;
