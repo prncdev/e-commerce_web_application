@@ -1,15 +1,17 @@
 import { Fragment } from "react";
 import { Link, Outlet } from "react-router-dom";
+import {ReactComponent as CwnLogo} from '../../assets/crown.svg';
+import './Navigation.styles.scss';
 
 const Navigation = function () {
   return (
     <Fragment>
-      <header>
-        <Link className='nav-link' to='/'>
-          <h1>Logo</h1>
+      <header className='navigation'>
+        <Link className='logo-container' to='/'>
+          <CwnLogo className='logo' />
         </Link>
 
-        <nav>
+        <nav className='nav-links-container'>
           <Link className='nav-link' to='shop'>SHOP</Link>
         </nav>
       </header>
