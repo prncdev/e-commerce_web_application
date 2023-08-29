@@ -1,12 +1,23 @@
 import { Component } from 'react';
-import CatagoriesContainer from './Components/catagories-container/catagories-container.component';
-import catagories from './Product-Data/categories.json';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Routes/Home.component';
+
+// Just for example.
+const Shop = function() {
+  return (
+    <h1>This is Shop page</h1>
+  )
+}
 
 class App extends Component {
   render() {
     return (
       <main className='App'>
-        <CatagoriesContainer catagories={catagories}/>
+        <Routes>
+          <Route path='/' element={<Home />}>
+            <Route path='shop' element={<Shop />} />
+          </Route>
+        </Routes>
       </main>
     );
   }
