@@ -5,18 +5,18 @@ import Navigation from './Routes/Nav/Nav.component';
 import Shop from './Routes/Shop/Shop.component';
 
 class App extends Component {
-    render() {
-      return (
-        <main className='App'>
-          <Routes>
-            <Route path='/' element={<Navigation />}>
-              <Route index element={<Home />} />
-              <Route path='shop' element={<Shop />} />
-            </Route>
-          </Routes>
-        </main>
-      );
-    }
+  render() {
+    return (
+      <main className='App'>
+        <Routes>
+          <Route path='/' element={<Navigation />}>
+            <Route index element={<Home />} />
+            <Route path='shop' element={<Shop />} />
+          </Route>
+        </Routes>
+      </main>
+    );
   }
+}
 
 export default App;
