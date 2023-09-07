@@ -1,16 +1,17 @@
 import './Catagory-item.styles.scss';
+import CatagoryImage from '../catagory-image/Catagory-image.component';
 
-const CatagoryItem = function ({title, imageUrl}) {
+const CatagoryItem = function ({catagory}) {
+  const {title, imageUrl} = catagory;
   return (
     <section className='category-container'>
-      {/* In order to have inline css on a JSX element, we can do that with `style` props and double curly brackets. */}
-      <div className='background-image' style={{ backgroundImage: `url(${imageUrl})` }} />
+      <CatagoryImage image={imageUrl}/>
       <section className='category-body-container'>
         <h2 className='product-title'>{title}</h2>
         <p>Shop Now</p>
       </section>
     </section>
-  )
+  );
 }
 
 export default CatagoryItem;
