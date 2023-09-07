@@ -1,8 +1,6 @@
 import { singUPWithGooglePopUp, getUserDocumentFromAuth } from "../../utils/DB/FireStore";
 
 function SignUp() {
-
-  // The function should be async/await because it will make a network request which takes some time to resolve.
   const logGoogleUser = async function () {
     const { user } = await singUPWithGooglePopUp();
     const userDocRef = await getUserDocumentFromAuth(user);
